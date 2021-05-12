@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
         releaseDate: new Date(),
         price: 300.99
       }];
-    },2000) //Time to wait to execute function
+    },0) //Time to wait to execute function
   }
   title = 'any value';
 
