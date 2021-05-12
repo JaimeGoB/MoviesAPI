@@ -1,41 +1,11 @@
-<p>Hello World!</p>
-
-<div>
-    {{title}}
-</div>
-
-<div>
-    The sume of 2 + 2 = {{2+2}}
-</div>
-
-<div>
-    The square of 3 => {{squareNumber(3)}}
-</div>
-
 <h2>
-    Movie Data
+    In Theaters
 </h2>
 
-<!-- This will display a waiting link when array is being loaded -->
-<div *ngIf="!movies">
-    <img src = "https://i.gifer.com/origin/3f/3face8da2a6c3dcd27cb4a1aaa32c926_w200.webp">
-</div>
+<app-movies-list></app-movies-list>
 
-<!-- This will display a message if array is empty -->
-<div *ngIf = "movies?.length === 0">
-    There are no movies to display.
-</div>
+<h2>
+    Future Releases
+</h2>
 
-<div *ngFor="let movie of movies; let index = index" class ="movie-container">
-    <div>
-        {{index}}    {{movie.title | lowercase}}
-    </div>
-    
-    <div>
-        {{movie.releaseDate | date:'dd-MMMM-yyyy' | uppercase}}
-    </div>
-    
-    <div>
-        {{movie.price | currency}}
-    </div>
-</div>
+<app-movies-list></app-movies-list>
