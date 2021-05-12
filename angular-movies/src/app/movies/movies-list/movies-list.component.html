@@ -8,17 +8,19 @@
     There are no movies to display.
 </div>
 
-<div *ngFor="let movie of movies; let index = index" class ="movie-container">
-    <div>
-        {{index}}    {{movie.title | lowercase}}
-        <button style="margin-left: 1rem;" (click)="remove(index)"> Remove </button>
+<ng-container *ngIf="movies && movies.length > 0"> -->
+    <div *ngFor="let movie of movies; let index = index" class ="movie-container">
+        <div>
+            {{index}}    {{movie.title | lowercase}}
+            <button style="margin-left: 1rem;" (click)="remove(index)"> Remove </button>
+        </div>
+        
+        <div>
+            {{movie.releaseDate | date:'dd-MMMM-yyyy' | uppercase}}
+        </div>
+        
+        <div>
+            {{movie.price | currency}}
+        </div>
     </div>
-    
-    <div>
-        {{movie.releaseDate | date:'dd-MMMM-yyyy' | uppercase}}
-    </div>
-    
-    <div>
-        {{movie.price | currency}}
-    </div>
-</div>
+</ng-container>
