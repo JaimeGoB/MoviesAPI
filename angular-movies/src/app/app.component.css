@@ -1,3 +1,12 @@
 p {
     color: red;
 }
+
+.movie-container{
+    /*this is use to add a black box around this class*/
+    border: 1px solid black;
+    /*this is use to add space between boxes*/
+    margin-bottom: 1rem; 
+    /*this is use to add add padding(center)*/
+    padding: 1rem;
+}
