@@ -5,7 +5,34 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  ngOnInit(): void{
+    this.moviesInTheaters = [{
+      title: 'Spider-Man',
+      releaseDate: new Date(),
+      price: 1400.99
+    },
+    {
+      title: 'Moana',
+      releaseDate: new Date(),
+      price: 300.99
+    }];
+
+    this.moviesFutureReleases = [{
+      title: 'Avengers',
+      releaseDate: new Date(),
+      price: 456.99
+    },
+    {
+      title: 'Toy Story',
+      releaseDate: new Date('2021-11-14'),
+      price: 789.99
+    }];
+  }
+  //Declaring Arrays for Movies Lists
+  moviesInTheaters;
+  moviesFutureReleases;
 
   squareNumber(n: number){
     return n*n;

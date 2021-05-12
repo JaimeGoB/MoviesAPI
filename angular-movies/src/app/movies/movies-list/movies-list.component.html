@@ -11,6 +11,7 @@
 <div *ngFor="let movie of movies; let index = index" class ="movie-container">
     <div>
         {{index}}    {{movie.title | lowercase}}
+        <button style="margin-left: 1rem;" (click)="remove(index)"> Remove </button>
     </div>
     
     <div>
