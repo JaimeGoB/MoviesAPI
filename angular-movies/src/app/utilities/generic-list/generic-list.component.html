@@ -1,0 +1,32 @@
+
+<!-- This will triggered if list is not initialized -->
+<div *ngIf="!list">
+    
+    <!--Display user passed content from loading-->
+    <span #loading>
+        <ng-content select="[loading]"></ng-content>
+    </span>
+    
+    <!--User did not pass content into loading => display loading image-->
+    <span *ngIf="!loading.innerHTML.trim()">
+        <img src = "https://i.gifer.com/origin/3f/3face8da2a6c3dcd27cb4a1aaa32c926_w200.webp">
+    </span>
+</div>
+
+<!-- This will triggered if list is initialized but empty -->
+<div *ngIf = "list?.length === 0">
+        <!--Display user passed content from empty-->
+        <span #empty>
+            <ng-content select="[empty]"></ng-content>
+        </span>
+        
+        <!--User did not pass content into empty => display this message-->
+        <span *ngIf="!empty.innerHTML.trim()">
+            There are no movies to display.        
+        </span>
+</div>
+
+<!-- This will triggered if list is initialized with 1 or more values -->
+<ng-container *ngIf="list && list.length > 0">
+    <ng-content select="[content]"></ng-content>
+</ng-container>
