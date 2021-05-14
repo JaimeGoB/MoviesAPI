@@ -2,6 +2,7 @@
 *ngFor="let i of maxRatingArr; let index = index"
 (mouseenter) = "handleMouseEnter(index)"
 (mouseleave) = "handleMouseLeave()"
+(click) = "rate(index)"
 [ngClass] = "{checked: selectedRate > index}"
 >
 <!--ngClass, add/remove css class to element based

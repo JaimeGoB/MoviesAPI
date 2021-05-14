@@ -13,8 +13,9 @@ export class RatingComponent implements OnInit {
   maxRating = 5;
   @Input()
   selectedRate = 0;
-
+  previousRate = 0;
   maxRatingArr = [];
+
   ngOnInit(): void {
     //Create array size of value of maxRating
     this.maxRatingArr = Array(this.maxRating).fill(0);
@@ -28,7 +29,18 @@ export class RatingComponent implements OnInit {
 
   handleMouseLeave()
   {
+    if(this.previousRate !== 0 ){
+      this.selectedRate = this.previousRate;
+    }else{
+      this.selectedRate = 0;
+    }
+    
+  }
+  
+  rate(index: number)
+  {
     //Mark
-    this.selectedRate = 0;
+    this.selectedRate = index + 1;
+    this.previousRate = this.selectedRate;
   }
 }
