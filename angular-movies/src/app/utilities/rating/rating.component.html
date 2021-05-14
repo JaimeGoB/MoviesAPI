@@ -1,6 +1,7 @@
 <mat-icon 
 *ngFor="let i of maxRatingArr; let index = index"
 (mouseenter) = "handleMouseEnter(index)"
+(mouseleave) = "handleMouseLeave()"
 [ngClass] = "{checked: selectedRate > index}"
 >
 <!--ngClass, add/remove css class to element based

@@ -25,4 +25,10 @@ export class RatingComponent implements OnInit {
     //Mark
     this.selectedRate = index + 1;
   }
+
+  handleMouseLeave()
+  {
+    //Mark
+    this.selectedRate = 0;
+  }
 }
