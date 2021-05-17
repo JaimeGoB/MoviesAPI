@@ -11,13 +11,14 @@ import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     MoviesListComponent,
     GenericListComponent,
     MenuComponent,
-    RatingComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
