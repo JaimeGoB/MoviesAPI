@@ -1,9 +1,29 @@
 
 .movie-container{
-    /*this is use to add a black box around this class*/
-    border: 1px solid black;
-    /*this is use to add space between boxes*/
-    margin-bottom: 1rem; 
-    /*this is use to add add padding(center)*/
-    padding: 1rem;
+    margin-right: 2%;
+    margin-bottom:10px;
+    text-align: center;
+}
+
+.movies-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+p{
+    max-width: 225px;
+    height: 44px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+image{
+    width: 225px;
+    height: 300px;
+}
+
+button{
+    margin-left: 1em;
 }

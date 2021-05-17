@@ -4,18 +4,28 @@
     variable passed down from Movies List Component (movies)-->
 <app-generic-list [list]="movies">
     <ng-container content>
-        <div *ngFor="let movie of movies; let index = index" class ="movie-container">
-            <div>
-                {{index}}    {{movie.title | lowercase}}
-                <button style="margin-left: 1rem;" (click)="remove(index)"> Remove </button>
-            </div>
-            
-            <div>
-                {{movie.releaseDate | date:'dd-MMMM-yyyy' | uppercase}}
-            </div>
-            
-            <div>
-                {{movie.price | currency}}
+        <div class="movies-container">
+            <div *ngFor="let movie of movies; let index = index" 
+            class ="movie-container">
+                <!--Poster Image-->
+                <a>
+                    <img [src]="" alt="Poster" />
+                </a>
+                <!--Movie Title-->
+                <p>
+                    <a>
+                        {{movie.title}}
+                    </a>
+                </p>
+                <!--Buttons-->
+                <div>
+                    <a mat-flat-button color="primary">
+                        Edit
+                    </a>
+                    <button mat-flat-button color="warn" type="button">
+                        Delete
+                    </button>
+                </div>
             </div>
         </div>
     </ng-container>
