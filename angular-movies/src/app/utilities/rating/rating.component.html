@@ -1,3 +1,10 @@
+<!-- mat-icon
+    mouseenter - user hovers over, the current and previous 
+                 stars gets light up
+    mouseleave - user leaves, the current and previous 
+                 stars gets do not light up
+    click - user clicks star, keep highlighted star and previous stars
+-->
 <mat-icon 
 *ngFor="let i of maxRatingArr; let index = index"
 (mouseenter) = "handleMouseEnter(index)"
@@ -5,8 +12,8 @@
 (click) = "rate(index)"
 [ngClass] = "{checked: selectedRate > index}"
 >
-<!--ngClass, add/remove css class to element based
-on condition.
+<!--ngClass
+add/remove css class to element based on condition:
 if selectedRate = 3, so 0,1,2 will have the checked class.
 In the css, it will change the color of checked class
 in this case star 0,1,2 will be orange-->

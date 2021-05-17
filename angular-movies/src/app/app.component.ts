@@ -46,4 +46,9 @@ export class AppComponent implements OnInit {
   squareNumber(n: number){
     return n*n;
   }
+
+  handleRating(rate: number){
+    alert(`The user has select ${rate}`)
+  }
+
 }
