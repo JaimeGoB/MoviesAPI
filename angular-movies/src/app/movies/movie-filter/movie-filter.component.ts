@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class MovieFilterComponent implements OnInit {
 
   form: FormGroup;
+  genres = [{id: 1, name:'Drama'},
+            {id: 2, name: 'Action'}];
 
   constructor(private formBuilder: FormBuilder) { }
 
