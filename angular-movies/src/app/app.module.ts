@@ -12,6 +12,9 @@ import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
 import { HomeComponent } from './home/home.component';
 import { IndexGenresComponent } from './genres/index-genres/index-genres.component';
+import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
+import { IndexActorsComponent } from './actors/index-actors/index-actors.component';
+import { CreateActorsComponent } from './actors/create-actors/create-actors.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { IndexGenresComponent } from './genres/index-genres/index-genres.compone
     MenuComponent,
     RatingComponent,
     HomeComponent,
-    IndexGenresComponent  
+    IndexGenresComponent,
+    CreateGenreComponent,
+    IndexActorsComponent,
+    CreateActorsComponent  
   ],
   imports: [
     BrowserModule,
