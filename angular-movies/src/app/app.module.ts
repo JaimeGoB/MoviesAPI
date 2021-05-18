@@ -15,6 +15,9 @@ import { IndexGenresComponent } from './genres/index-genres/index-genres.compone
 import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
 import { IndexActorsComponent } from './actors/index-actors/index-actors.component';
 import { CreateActorsComponent } from './actors/create-actors/create-actors.component';
+import { IndexMovieTheaterComponent } from './movie-theaters/index-movie-theater/index-movie-theater.component';
+import { CreateMovieTheaterComponent } from './movie-theaters/create-movie-theater/create-movie-theater.component';
+import { CreateMovieComponent } from './movies/create-movie/create-movie.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { CreateActorsComponent } from './actors/create-actors/create-actors.comp
     IndexGenresComponent,
     CreateGenreComponent,
     IndexActorsComponent,
-    CreateActorsComponent  
+    CreateActorsComponent,
+    IndexMovieTheaterComponent,
+    CreateMovieTheaterComponent,
+    CreateMovieComponent  
   ],
   imports: [
     BrowserModule,
