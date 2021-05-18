@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,8 +15,11 @@ export class CreateGenreComponent implements OnInit {
   constructor(private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    //The form will display an empty string in name
     this.form = this.formBuilder.group({
-      name: ''
+      name: ['', {
+        validators: [Validators.required]
+      }]
     });
   }
 
