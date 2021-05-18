@@ -32,6 +32,7 @@ const routes: Routes = [
 
   {path: 'movies/create', component: CreateMovieComponent},
   {path: 'movies/edit/:id', component: EditMovieComponent},
+  
   //Wild Card - reroutes to home component
   {path: '**', redirectTo:'' }
 
