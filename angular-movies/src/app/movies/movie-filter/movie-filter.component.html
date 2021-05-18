@@ -3,11 +3,14 @@
 </h2>
 
 <form [formGroup]="form">
+<!--All this will be part of the form-->
+    <!--Fill Title-->
     <mat-form-field appearance="outline">
         <mat-label>Title</mat-label>
         <input formControlName="title" matInput />
     </mat-form-field>
 
+    <!--Select Genre-->
     <mat-form-field appearance="outline">
         <mat-label>Genre</mat-label>
         <mat-select formControlName="genreId">
@@ -17,4 +20,16 @@
         </mat-select>
     </mat-form-field>
 
+    <!--Checkboxes-->
+    <div>
+        <mat-checkbox formControlName="upcomingReleases">
+            Upcoming Releases
+        </mat-checkbox>
+    </div>
+    <div>
+        <mat-checkbox formControlName="inTheaters">
+            In Theaters
+        </mat-checkbox>
+    </div>
+ <!--All this will be part of the form-->
 </form>

@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon'
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
 import {MatSelectModule} from '@angular/material/select'
+import {MatCheckboxModule} from '@angular/material/checkbox'
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import {MatSelectModule} from '@angular/material/select'
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ],
   imports: [
     CommonModule
