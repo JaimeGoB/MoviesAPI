@@ -27,4 +27,15 @@ export class CreateGenreComponent implements OnInit {
     //Redirect back to genres route after saving a genre
     this.router.navigate(['/genres']);
   }
+
+  getErrorMessageFieldName()
+  {
+    const field = this.form.get('name');
+
+    if(field.hasError('required')){
+      return 'The name field is requiered';
+    }
+
+    return '';
+  }
 }
