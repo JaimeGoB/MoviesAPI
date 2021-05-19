@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { addListener } from 'process';
+import { actorCreationDTO } from '../actors.model';
 
 @Component({
   selector: 'app-edit-actor',
@@ -9,12 +10,18 @@ import { addListener } from 'process';
 })
 export class EditActorComponent implements OnInit {
 
+  model: actorCreationDTO = {name: 'Tom Holland', dateOfBirth: new Date()};
+
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      alert(params.id)
+      //alert(params.id)
     });
   }
 
+  saveChanges(actorCreationDTO: actorCreationDTO)
+  {
+    console.log(actorCreationDTO);
+  }
 }
