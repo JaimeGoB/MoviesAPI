@@ -1,7 +1,7 @@
 <h2>
     Search Movies
 </h2>
-
+<!--DISPLAY: SEARCH AND SELECTION BOXES -->
 <form [formGroup]="form">
 <!--All this will be part of the form-->
     <!--Fill Title-->
@@ -31,5 +31,17 @@
             In Theaters
         </mat-checkbox>
     </div>
+
+    <!--Button to clear all selections-->
+    <div class="clear-container">
+        <button mat-flat-button (click)="clearForm()" color="warn">
+            Clear
+        </button>
+    </div>
  <!--All this will be part of the form-->
 </form>
+
+<!--DISPLAY ALL MOVIES-->
+<app-movies-list [movies]="movies">
+
+</app-movies-list>

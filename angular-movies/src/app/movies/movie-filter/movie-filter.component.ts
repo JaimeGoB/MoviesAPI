@@ -10,7 +10,13 @@ export class MovieFilterComponent implements OnInit {
 
   form: FormGroup;
   genres = [{id: 1, name:'Drama'},
-            {id: 2, name: 'Action'}];
+            {id: 2, name: 'Action'}
+  ];
+  movies = [{title: 'Spider-Man', poster: 'https://m.media-amazon.com/images/M/MV5BMGZlNTY1ZWUtYTMzNC00ZjUyLWE0MjQtMTMxN2E3ODYxMWVmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'},
+            {title: 'Moana', poster: 'https://m.media-amazon.com/images/M/MV5BMjI4MzU5NTExNF5BMl5BanBnXkFtZTgwNzY1MTEwMDI@._V1_UX182_CR0,0,182,268_AL_.jpg'},
+            {title: 'Inception', poster: 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg'}
+  ];
+
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -23,4 +29,7 @@ export class MovieFilterComponent implements OnInit {
     });
   }
 
+  clearForm(){
+    
+  }
 }
