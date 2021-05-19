@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EventEmitter } from '@angular/core';
+import { actorCreationDTO } from '../actors.model';
 
 @Component({
   selector: 'app-form-actor',
@@ -9,6 +11,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FormActorComponent implements OnInit {
 
   form: FormGroup;
+  
+  @Output()
+  onSaveChanges = new EventEmitter<actorCreationDTO>();
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -19,6 +24,11 @@ export class FormActorComponent implements OnInit {
       }],
       dateOfBirth: ''
     });
+  }
+
+  saveChanges()
+  {
+    this.onSaveChanges.emit(this.form.value);
   }
 
 }
