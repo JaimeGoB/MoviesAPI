@@ -12,7 +12,7 @@ export class EditActorComponent implements OnInit {
   model: actorDTO = {
     name: 'Tom Holland',
     dateOfBirth: new Date(),
-    picture: '',
+    picture: './assets/images/actors/brendaSong.jpg',
   };
 
   constructor(private activatedRoute: ActivatedRoute) {}

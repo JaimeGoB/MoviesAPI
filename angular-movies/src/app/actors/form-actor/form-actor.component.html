@@ -12,7 +12,8 @@
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-    <app-input-img (onImageSelected)="onImageSelected($event)">
+    <app-input-img  [urlCurrentImage] = "model?.picture"
+                    (onImageSelected)="onImageSelected($event)">
 
     </app-input-img>
     

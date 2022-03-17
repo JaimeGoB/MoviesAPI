@@ -8,4 +8,9 @@
             <img [src]="imageBase64" />
         </div>
     </div>
+    <div>
+        <div *ngIf="urlCurrentImage">
+            <img [src]="urlCurrentImage" />
+        </div>
+    </div>
 </div>
