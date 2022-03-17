@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
 import { GenericListComponent } from './utilities/generic-list/generic-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
@@ -27,7 +27,7 @@ import { MovieFilterComponent } from './movies/movie-filter/movie-filter.compone
 import { FormActorComponent } from './actors/form-actor/form-actor.component';
 import { InputImgComponent } from './utilities/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
-
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -52,16 +52,18 @@ import { InputMarkdownComponent } from './utilities/input-markdown/input-markdow
     MovieFilterComponent,
     FormActorComponent,
     InputImgComponent,
-    InputMarkdownComponent  
+    InputMarkdownComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

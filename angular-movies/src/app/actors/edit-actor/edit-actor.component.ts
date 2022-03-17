@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { addListener } from 'process';
 import { actorCreationDTO, actorDTO } from '../actors.model';
 
 @Component({
