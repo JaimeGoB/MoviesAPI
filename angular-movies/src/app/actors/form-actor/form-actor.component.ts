@@ -29,6 +29,7 @@ export class FormActorComponent implements OnInit {
       ],
       dateOfBirth: '',
       picture: '',
+      biography: '',
     });
 
     // if we are receiving a model as input (actors/edit/:id)
@@ -49,5 +50,9 @@ export class FormActorComponent implements OnInit {
 
   onImageSelected(image) {
     this.form.get('picture').setValue(image);
+  }
+
+  changeMarkdown(content) {
+    this.form.get('biography').setValue(content);
   }
 }

@@ -1,6 +1,6 @@
 <form (submit)="saveChanges()" [formGroup]="form">
     <mat-form-field appearance="outline">
-        <mat-label>Name*</mat-label>
+        <mat-label>Name</mat-label>
         <input formControlName="name" matInput />
         <mat-error>The name field is requiered</mat-error>
     </mat-form-field>
@@ -18,7 +18,9 @@
     </app-input-img>
     
     <h4>Biography</h4>
-    <app-input-markdown></app-input-markdown>
+    <app-input-markdown [markdownContent]="model?.biography"
+                        (changeMarkdown)="changeMarkdown($event)">
+    </app-input-markdown>
 
     <div>
         <button mat-flat-button color="primary" 

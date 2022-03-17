@@ -12,6 +12,7 @@ export class EditActorComponent implements OnInit {
     name: 'Tom Holland',
     dateOfBirth: new Date(),
     picture: './assets/images/actors/brendaSong.jpg',
+    biography: 'Place bio here.',
   };
 
   constructor(private activatedRoute: ActivatedRoute) {}
