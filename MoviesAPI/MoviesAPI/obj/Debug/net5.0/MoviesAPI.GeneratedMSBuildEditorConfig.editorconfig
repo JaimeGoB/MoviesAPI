@@ -6,3 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = MoviesAPI
+build_property.ProjectDir = C:\Users\jaime\Documents\Personal\Udemy\Building Applications with Angular 11 and ASP.Net Core 5\source\AngularMovies\MoviesAPI\MoviesAPI\
