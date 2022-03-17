@@ -1,27 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { addListener } from 'process';
-import { actorCreationDTO } from '../actors.model';
+import { actorCreationDTO, actorDTO } from '../actors.model';
 
 @Component({
   selector: 'app-edit-actor',
   templateUrl: './edit-actor.component.html',
-  styleUrls: ['./edit-actor.component.css']
+  styleUrls: ['./edit-actor.component.css'],
 })
 export class EditActorComponent implements OnInit {
+  model: actorDTO = {
+    name: 'Tom Holland',
+    dateOfBirth: new Date(),
+    picture: '',
+  };
 
-  model: actorCreationDTO = {name: 'Tom Holland', dateOfBirth: new Date()};
-
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
+    this.activatedRoute.params.subscribe((params) => {
       //alert(params.id)
     });
   }
 
-  saveChanges(actorCreationDTO: actorCreationDTO)
-  {
+  saveChanges(actorCreationDTO: actorCreationDTO) {
     console.log(actorCreationDTO);
   }
 }
